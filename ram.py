@@ -8,6 +8,6 @@ app.config["DEBUG"] = True
 @app.route('/ramusage', methods=['GET'])
 def home():
     values = psutil.virtual_memory()
-    return size(values.available )
+    return size(values.free)
 
 app.run()
